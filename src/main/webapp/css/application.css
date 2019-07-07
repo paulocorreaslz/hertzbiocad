@@ -1,0 +1,154 @@
+@CHARSET "UTF-8"; 
+
+body {
+    color: #333333;
+    background-color: #F5F5F5;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+td.actions {
+	width: 25%;	
+}
+
+#login {
+	height: 230px;
+	width: 555px;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
+    position: relative;
+    padding: 1px;
+}
+
+#login .fields_box {
+	float: left;
+	padding: 20px;
+	border-radius: 5px 0 0 5px;
+}
+
+#login .logo_box {
+    float: right;
+    background-color: #DCDCDC;  
+    border-radius: 0 5px 5px 0; 
+    width: 220px;
+    padding: 20px;
+    height: 190px;
+}
+
+#login-errors {
+	width: 550px;
+    margin-top: 140px;
+    position: relative;
+    padding: 1px;
+}
+
+.main-container {
+	background-color: #F5F5F5;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 200px;
+    padding: 20px;
+}
+
+#main {
+	background-color: #FFFFFF;
+    border-radius: 0 0 3px 3px;
+    border-top: 0 none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    margin: 0 auto 40px;
+    max-width: 960px;
+    padding: 40px 20px 10px 20px;    
+    position: relative;
+    top: -20px;
+}
+
+#topo {
+	height: 90px;
+	background-color: #FFF;
+}
+
+#topo .logo {
+	margin: 15px 0 0 20px;
+}
+
+#topo .logo img {
+	width: 310px;
+	height: 70px;
+}
+
+#topo .user-info {
+	border: 2px solid #E5E5E5;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    padding-bottom: 0;
+    margin: 3px 2px 0 0;
+    font-size: 0.85em;
+}
+
+#inicio {
+	width:300px;
+	height:350px;
+	position: relative;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#error_page {
+	margin-top: 100px;
+}
+
+#error_page img {
+	height: 125px;
+	width: 125px;
+	margin: 0 30px 20px 0;
+}
+
+#error_page .error_message {
+	color: red;
+}
+
+.breadcrumb-wrapper {
+	border-radius: 5px;
+	border: 1px solid #E3E3E3;
+	margin-bottom: 30px;
+}
+
+.footer-wrapper {
+	font-size: 0.85em;
+	margin-top: 50px;
+	color: #666;
+}
+
+.footer-wrapper hr {
+    margin-bottom: 5px;
+    border-top: 1px solid #DDD;
+}
+
+#pagination-totals {
+	padding-top: 5px;	
+}
+
+.container-blog {
+	margin-top: 30px;
+}
+
+.logo-h1 {
+	height: 125px;
+	width: 125px;
+	margin: 0 30px 20px 0;
+}

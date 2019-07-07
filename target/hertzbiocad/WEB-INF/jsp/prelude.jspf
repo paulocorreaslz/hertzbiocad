@@ -1,0 +1,6 @@
+<%@ taglib uri="http://waffle.codehaus.org" prefix="w" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://www.caelum.com.br/vraptor-environment/taglib" prefix="env" %>
+<%@ taglib uri="http://vraptorbridge.trema.jus.br/taglib" prefix="vrb" %>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="estados" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="TITULO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TIPO" class="java.lang.String"/>
+	<parameter name="ZONA" class="java.lang.Integer"/>
+	<parameter name="DATA_INI" class="java.util.Date"/>
+	<parameter name="DATA_FIM" class="java.util.Date"/>
+	<parameter name="CAMINHO_BRASAO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SECAO" class="java.lang.String"/>
+	<parameter name="APP_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Bridge"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TRE_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["TRIBUNAL REGIONAL ELEITORAL DO MARANHÃO"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TRE_DEPARTMENT" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Secretaria de Tecnologia da Informação"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGES_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="REPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nome" class="java.lang.String"/>
+	<field name="sigla" class="java.lang.String"/>
+	<field name="pais.nome" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-4" x="82" y="52" width="441" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Relatório de Estados]]></text>
+			</staticText>
+			<image>
+				<reportElement key="image-1" x="10" y="9" width="64" height="64"/>
+				<imageExpression><![CDATA[$P{IMAGES_DIR} + "brasao-report.gif"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement key="line-1" positionType="FixRelativeToBottom" x="1" y="77" width="534" height="1" forecolor="#000000"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-2" positionType="FixRelativeToBottom" x="1" y="5" width="534" height="1" forecolor="#000000"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-10" x="82" y="14" width="441" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TRE_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-10" x="82" y="33" width="441" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TRE_DEPARTMENT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<rectangle>
+				<reportElement key="rectangle-1" x="1" y="0" width="534" height="23" forecolor="#666666" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-11" x="6" y="6" width="40" height="14"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Sans" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-12" x="356" y="6" width="76" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[SIGLA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-13" x="439" y="5" width="91" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[PAÍS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-6" x="6" y="1" width="346" height="14"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-9" x="356" y="1" width="76" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sigla}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-10" x="439" y="1" width="91" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="9" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pais.nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField isStretchWithOverflow="true" evaluationTime="Report" pattern="" isBlankWhenNull="true">
+				<reportElement key="textField-1" x="14" y="6" width="334" height="11"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="8" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APP_NAME} + " - " + new SimpleDateFormat("EEEEE, ").format(new java.util.Date()) + (new SimpleDateFormat("dd 'de' MMMMM 'de' yyyy '-' HH:mm:ss").format(new java.util.Date()).toLowerCase())]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="false">
+				<reportElement key="textField-2" x="490" y="6" width="45" height="11"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="8" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-3" x="415" y="6" width="75" height="11"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="8" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-3" positionType="FixRelativeToBottom" x="1" y="3" width="534" height="1" forecolor="#000000"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

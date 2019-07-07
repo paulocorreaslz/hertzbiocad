@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+		<!-- bridge models, don't delete them -->
+		<class>br.jus.trema.vraptorbridge.models.Application</class>
+		<class>br.jus.trema.vraptorbridge.models.Auditing</class>
+		<class>br.jus.trema.vraptorbridge.models.Authorization</class>
+		<class>br.jus.trema.vraptorbridge.models.Resource</class>
+		<class>br.jus.trema.vraptorbridge.models.Role</class>
+		<class>br.jus.trema.vraptorbridge.models.User</class>
+		
+		<!-- app models, it's optional do add them -->
+    </persistence-unit>
+
+</persistence>
